@@ -4,145 +4,102 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mohsenBazrafshan
+namespace ConsoleApplication1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //for (int i = 1; i <= 20; i++)
-            //Console.WriteLine(i);
-
-
-            //for (int i = 100; i <=999; i++)
-            //Console.WriteLine(i);
-
-
-            //int bimar=int.Parse(Console.ReadLine());
-            //for (int i = 1; i <= bimar; i++)
-            //    Console.WriteLine(i);
-
-
-            // Console.Write("fard :");
-            //  for (int i = 1; i < 30; i += 2)
-            //  {
-            //      Console.Write("{0,5}" ,i);
-            //  }
-            //  Console.WriteLine("zooj :");
-            //  for (int a = 2; a < 30; a += 2)
-            //  {
-            //      Console.Write("{0,5}" ,a);
-            //  }
-
-
-            //for (int i = 2; i <= 30; i++)
+            //string mystr= Console.ReadLine();
+            ////for (int i = 0; i < mystr.Length; i++)
+            ////{
+            //// Console.WriteLine(mystr[i]);
+            ////}
+            ////ravesh2
+            //foreach (char item in mystr)
             //{
-            //    Console.Write("{0,5}",i);
+            //  Console.WriteLine(item);	
+            //}
+            //for (int i =mystr.Length-1; i >= 0; i--)
+            //{
+            // Console.WriteLine(mystr[i]);
             //}
 
 
-            //for (int i = 2; i <= 30; i++)
+            //string name = "nima";
+            //int[] numeber = new int[5] { 10, 20, 30, 40, 50 };
+            //name = "mmad";
+            //numeber[3] = 55;
+            //for (int i = 0; i < 4; i++)
+            //    Console.WriteLine("your name is {0} and your {1}",name[i],numeber[i]);
+            //////foreach (char item in numeber)
             //{
-            //    i++;
-            //    Console.Write("{0,5}",i);
+            //    Console.WriteLine(item); 
+            //}
+
+            //foreach (int item in name)
+            //{
+            //    Console.WriteLine(item); 
+            //}
+
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    Console.WriteLine(numeber[i]);
             //}
 
 
-            // for (int i = 5; i >= 1; i--)
-            //     Console.Write(i);
-
-
-            // for (int i = 0; i < 10; i += 3)
-            //     Console.Write(i);
-
-
-            // for (int i = 10; i >= 0; i-= 2)
-            //     Console.Write(i);
-
-
-            // int a = 10;
-            // for (int i = 1; i <= 5; i++)
-            // {
-            //     Console.WriteLine("{0} + {1}", i, a);
-            //     a--;
-            // }
-
-
-            //for (int i = 1; i <= 100; i++)
+            //int[]price=new int[50];
+            //for (int i = 0; i < 50; i++)
             //{
-            //    if (i % 5 == 0)
-            //        Console.WriteLine("hop");
+            //    Console.Write("enter the price of {0} the product : ", i + 1);
+            //    int temp = int.Parse(Console.ReadLine());
+            //    if (temp > 0)
+            //        price[i] = temp;
             //    else
-            //        Console.WriteLine(i);
+            //        break;
             //}
-
-            //for (int i = 1; i <= 100; i++)
-            //{
-            //    if (i % 3 == 0)
-            //        Console.WriteLine("hop");
-            //    else
-            //        Console.WriteLine(i);
-            //}
-
-
-            //int sum=0;
-            //int minute;
-            //for (int i = 1; i < 8; i++)
-            //{
-            //    Console.WriteLine("please rate the day {0} enter in minutes =",i);
-            //    minute = int.Parse(Console.ReadLine());
-            //    sum += minute;
-            //}
-            //Console.WriteLine("you studied for {0} minutes a week", sum);
+            //    Console.WriteLine("product price plus VAT ");
+            //    Console.Clear();
+            //    for (int j = 0; j < price.Length; j++)
+            //    {                    
+            //        price[j] = (int)(price[j] * 0.09 + price[j]);                    
+            //        if
+            //            (price[j] > 0)
+            //            Console.WriteLine("product{0} : {1}", j, price[j]);
+            //    }
 
 
-            //int sum = 0;
-            //int hours;
-            //for (int i = 1; i <= 4; i++)
-            //{
-            //    Console.WriteLine("please rate the week {0} enter in hour =", i);
-            //    hours = int.Parse(Console.ReadLine());
-            //    sum += hours;
-            //}
-            //Console.WriteLine("you studied for {0} hours a month", sum);
 
 
-            //int sum = 0;
-            //int hours;
-            //int i;
-            //for (i = 1; i <= 4; i++)
-            //{
-            //    Console.WriteLine("please rate the week {0} enter in hour =", i);
-            //    hours = int.Parse(Console.ReadLine());
-            //    sum += hours;
-            //}
-            //sum /= i - 1;
-            //Console.WriteLine("avarage hours in month : {0} ", sum);
 
-
-            int score = 5;
-            int month;
-            Console.Write("enter number your month :");
-            month = int.Parse(Console.ReadLine());
-            Console.Clear();
-            for (int i = 1; i <= 5; i++)
-            {
-                int guess;
-                Console.Write("your guess?");
-                guess = int.Parse(Console.ReadLine());
-                if (guess == month)
+            string[] car = { "prid", "mazda", "renault", "peugeot", "toyota" };
+            long[] price = { 100, 200, 300, 400, 5000 };
+            Console.Write("please enter car name for liner search : ");
+            string item = Console.ReadLine();
+            bool found = false;
+            for (int i = 0; i < car.Length; i++)
+                if (item == car[i])
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("you win");
-                    Console.WriteLine("your score: {0}", score);
+                    found = true;
+                    Console.WriteLine("{0} found in {1}", item, i);
+                    Console.WriteLine("price {0} = {1}", item, price[i]);
                     break;
                 }
-                else
-                {
-                    score -= 1;
-                    Console.WriteLine("try again  !");
-                }
+            if (found == false)
+            {
+                Console.WriteLine("item is not found");
             }
+
+
+            //int[] number = { 20, 18, 10, 15, 50, 80, 10, 37 };
+            //foreach (int item in number)
+            //{
+            //    Console.Write(item+"/t");
+            //}
+            //Array.Sort(number);
+            //Array.Reverse(number);
+            //Console.WriteLine(Array.BinarySearch(number,10));
+
 
 
 
