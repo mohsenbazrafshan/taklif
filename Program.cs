@@ -120,29 +120,29 @@ namespace mohsenBazrafshan
             //Console.WriteLine("avarage hours in month : {0} ", sum);
 
 
-            //int score = 5;
-            //int month;
-            //Console.Write("enter number your month :");
-            //month = int.Parse(Console.ReadLine());
-            //Console.Clear();
-            //for (int i = 1; i <= 5; i++)
-            //{
-            //    int guess;
-            //    Console.Write("your guess?");
-            //    guess = int.Parse(Console.ReadLine());
-            //    if (guess == month)
-            //    {
-            //        Console.ForegroundColor = ConsoleColor.Green;
-            //        Console.WriteLine("you win");
-            //        Console.WriteLine("your score: {0}", score);
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        score -= 1;
-            //        Console.WriteLine("try again  !");
-            //    }
-            //}
+            int score = 5;
+            int month;
+            Console.Write("enter number your month :");
+            month = int.Parse(Console.ReadLine());
+            Console.Clear();
+            for (int i = 1; i <= 5; i++)
+            {
+                int guess;
+                Console.Write("your guess?");
+                guess = int.Parse(Console.ReadLine());
+                if (guess == month)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("you win");
+                    Console.WriteLine("your score: {0}", score);
+                    break;
+                }
+                else
+                {
+                    score -= 1;
+                    Console.WriteLine("try again  !");
+                }
+            }
 
 
 
